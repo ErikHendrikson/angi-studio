@@ -30,7 +30,8 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -53,7 +54,7 @@ body {
 }
 
 .header__title {
-  margin-top: 5%;
+  margin-top: 30px;
 
   font-family: "SFProTextBold";
   font-size: 24px;
@@ -65,13 +66,17 @@ body {
   width: 250px;
   margin-top: 5%;
 
-  font-family: "SDProTextLight";
+  font-family: "SFProTextLight";
   font-size: 12.5px;
 
   color: #2f3132;
 }
 
 @media only screen and (min-width: 600px) {
+  .header {
+    width: 70%;
+  }
+
   .header__title {
     margin-top: 80px;
 
@@ -81,6 +86,86 @@ body {
   .header__description {
     margin-top: 20px;
     font-size: 25px;
-    width: 500px;
+    width: 600px;
   }
 }
+
+/* Header END */
+
+/* Main */
+
+/* New to Do */
+
+.newtodo {
+  margin-top: 25px;
+  width: 80%;
+}
+
+.newtodo__label {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  font-family: "SFProTextBold";
+  font-size: 12px;
+}
+
+.newtodo__inputwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newtodo__input {
+  width: 60%;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  outline: none;
+  font-size: 0.75rem;
+}
+
+.newtodo__input::placeholder {
+  color: #dedede;
+}
+
+.newtodo__btn {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+
+  font-family: "SFProTextBold";
+  font-size: 0.75rem;
+
+  color: white;
+  background-color: #179ce4;
+}
+
+@media only screen and (min-width: 600px) {
+  .newtodo {
+    margin-top: 40px;
+    width: 70%;
+  }
+
+  .newtodo__label {
+    font-size: 16px;
+  }
+
+  .newtodo__input {
+    width: 80%;
+
+    border-radius: 4px;
+  }
+
+  .newtodo__btn {
+    width: 136px;
+    height: 47px;
+
+    font-size: 1rem;
+  }
+}
+
+/* New to Do END */
+
+/* Main END */
