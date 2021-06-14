@@ -10,11 +10,25 @@
   <body>
     <header class="header">
       <div class="header__logo"><a href="#"> angi studio</a></div>
-      <h1 class="header__title">Job Application</h1>
+      <h1 class="header__title">Job application</h1>
       <p class="header__description">
         This to-do list contains the tasks I need to complete so I can apply to
         a job well prepared.
       </p>
     </header>
+    <div class="newtodo">
+      <form class="newtodo__form">
+        <label class="newtodo__label" for="newtodo-input">New to-do</label>
+        <div class="newtodo__inputwrapper">
+          <input
+            class="newtodo__input"
+            type="text"
+            name="newtodo-input"
+            placeholder="Your task..."
+          />
+          <button class="newtodo__btn">Add to-do</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
