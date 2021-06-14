@@ -1,0 +1,86 @@
+@font-face {
+  font-family: SFProTextBold;
+  src: url("Assets/Fonts/SF-Pro-Text-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProTextLight;
+  src: url("Assets/Fonts/SF-Pro-Text-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProTextMedium;
+  src: url("Assets/Fonts/SF-Pro-Text-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProTextRegular;
+  src: url("Assets/Fonts/SF-Pro-Text-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProTextSemibold;
+  src: url("Assets/Fonts/SF-Pro-Text-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProTextThin;
+  src: url("Assets/Fonts/SF-Pro-Text-Thin.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Header */
+
+.header {
+  margin-top: 40px;
+  width: 80%;
+}
+
+.header__logo {
+  font-family: "SFProTextBold";
+  font-size: 1rem;
+}
+
+.header__logo > a {
+  text-decoration: none;
+
+  color: #179ce4;
+}
+
+.header__title {
+  margin-top: 5%;
+
+  font-family: "SFProTextBold";
+  font-size: 24px;
+
+  color: #2f3132;
+}
+
+.header__description {
+  width: 250px;
+  margin-top: 5%;
+
+  font-family: "SDProTextLight";
+  font-size: 12.5px;
+
+  color: #2f3132;
+}
+
+@media only screen and (min-width: 600px) {
+  .header__title {
+    margin-top: 80px;
+
+    font-size: 48px;
+  }
+
+  .header__description {
+    margin-top: 20px;
+    font-size: 25px;
+    width: 500px;
+  }
+}
