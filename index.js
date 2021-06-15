@@ -3,6 +3,7 @@ const inputField = document.querySelector(".newtodo__input");
 const newTodoContainer = document.querySelector(".newtodo");
 const addTodoBtn = document.querySelector(".newtodo__btn");
 const todosList = document.querySelector(".todos__list");
+const footerBtn = document.querySelectorAll(".footer__arrow");
 
 // FUNCTIONS
 
@@ -60,6 +61,19 @@ addTodoBtn.addEventListener("click", (event) => {
   } else {
     addTodos(newTodoTextValue);
   }
+});
+
+// FOOTER ARROW EVENT LISTENER
+
+footerBtn.forEach((e) => {
+  e.addEventListener("click", () => {
+    const childElements = e.parentElement.parentElement.querySelectorAll(
+      ".footer__second__item__item"
+    );
+    childElements.forEach((e) => {
+      e.classList.toggle("footer__second__item__item--active");
+    });
+  });
 });
 
 // HARDCODED TO-DO'S

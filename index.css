@@ -119,9 +119,10 @@ body {
 }
 
 .newtodo__input {
-  width: 60%;
+  width: 100%;
   padding-left: 10px;
   border-radius: 4px;
+  margin-right: 24px;
   border: 1px solid #dedede;
   outline: none;
 
@@ -165,12 +166,6 @@ body {
     margin-left: 16px;
 
     font-size: 16px;
-  }
-
-  .newtodo__input {
-    width: 80%;
-
-    border-radius: 4px;
   }
 
   .newtodo__btn {
@@ -306,3 +301,270 @@ body {
 /* To do's END */
 
 /* Main END */
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+
+.footer__title {
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  font-family: "SFProTextBold";
+  font-size: 12px;
+}
+
+.footer__content__container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+
+.footer__links__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .footer {
+    width: 70%;
+  }
+
+  .footer__content__container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__title {
+    margin-bottom: 16px;
+    margin-left: 16px;
+
+    font-size: 16px;
+  }
+}
+
+/* Card */
+
+.footer__card {
+  width: 296px;
+  height: 371px;
+}
+
+.footer__img {
+  display: block;
+
+  height: 160px;
+  width: 296px;
+  object-fit: cover;
+  object-position: 50% 95%;
+}
+
+.footer__contentwrapper {
+  height: 211px;
+  width: 294px;
+  border: 1px solid #dedede;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.footer__content {
+  padding: 28px 31px 24px 24px;
+}
+
+.footer__card__title {
+  font-family: "SFProTextMedium";
+  font-size: 21px;
+
+  letter-spacing: -0.49px;
+  color: #2f3132;
+}
+
+.footer__text {
+  width: 241px;
+  height: 101px;
+  padding-top: 8px;
+
+  letter-spacing: -0.34px;
+  line-height: 23px;
+  font-family: "SFProTextRegular";
+  font-size: 14.4px;
+
+  color: #636363;
+}
+
+.footer__link {
+  padding-top: 8px;
+
+  font-family: "SFProTextRegular";
+  font-size: 14.4px;
+
+  color: #1a94e6;
+}
+
+.footer__arrowright {
+  width: 12px;
+  height: 9.7px;
+
+  color: rgb(150, 150, 150);
+}
+
+@media only screen and (min-width: 600px) {
+  .footer__card {
+    margin-right: 24px;
+  }
+}
+
+/* Card END*/
+
+/* Footer-first */
+
+.footer__first {
+  width: 45%;
+}
+
+.footer__first__list {
+  padding-bottom: 12px;
+
+  letter-spacing: -0.34px;
+  font-family: "SFProTextRegular";
+  font-size: 14.4px;
+
+  color: #2f3132;
+}
+
+.footer__first__item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  list-style-type: none;
+
+  border-bottom: 1px solid #dedede;
+
+  letter-spacing: -0.34px;
+
+  font-family: "SFProTextRegular";
+  font-size: 14.4px;
+
+  color: #1a94e6;
+}
+
+.footer__first__item:last-child {
+  border-bottom: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__first {
+    margin-top: 64px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .footer__first {
+    margin-right: 24px;
+
+    width: 100%;
+  }
+}
+
+/* Footer-first END */
+
+/* Footer-second */
+
+.footer__second {
+  width: 45%;
+}
+
+.footer__second__list {
+  letter-spacing: -0.34px;
+  font-family: "SFProTextRegular";
+  font-size: 14.4px;
+
+  color: #2f3132;
+}
+
+.footer__second__item {
+  list-style-type: none;
+
+  /* border-bottom: 1px solid #dedede; */
+}
+
+.footer__second__item__title {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dedede;
+
+  letter-spacing: -0.34px;
+
+  font-family: "SFProTextRegular";
+  font-size: 14.4px;
+
+  color: #1a94e6;
+}
+
+.footer__arrow {
+  border: solid #717171;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 1.5px;
+  width: 1.5px;
+}
+
+.footer__arrow__down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.footer__second__item__item {
+  display: none;
+
+  list-style-type: none;
+  margin-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  letter-spacing: -0.28px;
+  font-family: "SFProTextRegular";
+  font-size: 12px;
+
+  border-bottom: 1px solid #dedede;
+
+  color: #616161;
+}
+
+.footer__second__item__item--active {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__second {
+    margin-top: 64px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .footer__second {
+    width: 100%;
+  }
+}
+
+/* Footer-links-second END */
