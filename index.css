@@ -38,7 +38,7 @@ body {
 /* Header */
 
 .header {
-  margin-top: 40px;
+  margin-top: 65px;
   width: 80%;
 }
 
@@ -56,6 +56,7 @@ body {
 .header__title {
   margin-top: 30px;
 
+  letter-spacing: -1.13px;
   font-family: "SFProTextBold";
   font-size: 24px;
 
@@ -66,6 +67,7 @@ body {
   width: 250px;
   margin-top: 5%;
 
+  letter-spacing: -0.59px;
   font-family: "SFProTextLight";
   font-size: 12.5px;
 
@@ -78,7 +80,7 @@ body {
   }
 
   .header__title {
-    margin-top: 80px;
+    margin-top: 65px;
 
     font-size: 48px;
   }
@@ -122,7 +124,9 @@ body {
   border-radius: 4px;
   border: 1px solid #dedede;
   outline: none;
-  font-size: 0.75rem;
+
+  letter-spacing: -0.34px;
+  font-size: 14, 4px;
 }
 
 .newtodo__input::placeholder {
@@ -142,6 +146,14 @@ body {
   background-color: #179ce4;
 }
 
+.newtodo__response {
+  margin-top: 10px;
+  margin-left: 10px;
+
+  font-family: "SFProTextBold";
+  font-size: 12px;
+}
+
 @media only screen and (min-width: 600px) {
   .newtodo {
     margin-top: 40px;
@@ -149,6 +161,9 @@ body {
   }
 
   .newtodo__label {
+    margin-bottom: 16px;
+    margin-left: 16px;
+
     font-size: 16px;
   }
 
@@ -164,8 +179,130 @@ body {
 
     font-size: 1rem;
   }
+
+  .newtodo__response {
+    margin-top: 16px;
+    margin-left: 16px;
+
+    font-family: "SFProTextBold";
+    font-size: 16px;
+  }
 }
 
 /* New to Do END */
+
+/* To do's */
+
+.todos {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.todos__title {
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  font-family: "SFProTextBold";
+  font-size: 12px;
+}
+
+.todos__list {
+  list-style-type: none;
+}
+
+.todos__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #dedede;
+  height: 100px;
+
+  font-size: 16px;
+  letter-spacing: -0.38px;
+  font-family: "SFProTextRegular";
+  text-align: center;
+
+  color: #2f3132;
+}
+
+.todos__item--active {
+  background-color: #e2f0cf;
+  color: #8bc241;
+}
+
+.todos__check__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  border: solid 1px #dedede;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.todos__check__wrapper--active {
+  background-color: #8bc241;
+}
+
+.todos__check {
+  display: none;
+}
+
+.todos__check--active {
+  display: block;
+  color: white;
+}
+
+@media only screen and (max-width: 599px) {
+  .todos__list {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .todos__item {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .todos {
+    width: 70%;
+    margin-top: 64px;
+  }
+
+  .todos__title {
+    margin-bottom: 16px;
+    margin-left: 16px;
+
+    font-size: 16px;
+  }
+
+  .todos__list {
+    flex-direction: column;
+  }
+
+  .todos__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    height: 47px;
+
+    font-size: 16px;
+  }
+
+  .todos__check__wrapper {
+    margin-right: 16px;
+  }
+}
+
+/* To do's END */
 
 /* Main END */
