@@ -11,7 +11,7 @@ const getInputValue = () => {
   return inputField.value;
 };
 
-const addTodos = (todoText) => {
+const addTodos = (todoText, isNewItem) => {
   // create to-do list item
   const newTodoElement = document.createElement("li");
   newTodoElement.classList.add("todos__item");
@@ -40,7 +40,11 @@ const addTodos = (todoText) => {
   newTodoCheckWrapper.appendChild(newTodoCheck);
   newTodoElement.append(newTodoText, newTodoCheckWrapper);
 
-  todosList.appendChild(newTodoElement);
+  if (!isNewItem) {
+    todosList.appendChild(newTodoElement);
+  } else {
+    todosList.prepend(newTodoElement);
+  }
 
   // clear input field
   inputField.value = "";
@@ -59,7 +63,7 @@ addTodoBtn.addEventListener("click", (event) => {
       response.remove();
     }, 2000);
   } else {
-    addTodos(newTodoTextValue);
+    addTodos(newTodoTextValue, true);
   }
 });
 
@@ -67,12 +71,18 @@ addTodoBtn.addEventListener("click", (event) => {
 
 footerBtn.forEach((e) => {
   e.addEventListener("click", () => {
-    const childElements = e.parentElement.parentElement.querySelectorAll(
+    const listItems = e.parentElement.parentElement.querySelectorAll(
       ".footer__second__item__item"
     );
-    childElements.forEach((e) => {
+    listItems.forEach((e) => {
       e.classList.toggle("footer__second__item__item--active");
     });
+
+    const parentTitle = e.parentElement;
+
+    parentTitle.classList.toggle("footer__second__item__title--active");
+
+    e.classList.toggle("footer__arrow__down--active");
   });
 });
 
